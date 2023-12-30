@@ -1,0 +1,51 @@
+@import './colors';
+
+@mixin input {  
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: $white;
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        padding: 1.15rem 1.5rem;
+        background-color: $black;
+        border: 0;
+        font-size: 14px;
+        font-family: 'Space Mono';
+        color: $white;
+        display: block;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            color: $light-gray;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+@mixin button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    border: 0;
+    background-color: $main;
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba($color: $main, $alpha: .8);
+    }
+}

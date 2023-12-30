@@ -1,0 +1,113 @@
+@import "./colors.scss";
+
+@font-face {
+  font-family: "BM";
+  src: url("/fonts/Bergen_Mono/BergenMono-Regular.otf");
+}
+
+@font-face {
+  font-family: "DM";
+  src: url("/fonts/DankMono/Dank\ Mono\ Regular.otf");
+}
+
+@font-face {
+  font-family: "Pavelt";
+  src: url("/fonts/pavelt/Pavelt.ttf");
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+  resize: none;
+  -webkit-tap-highlight-color: transparent;
+  user-zoom: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  font-family: "BM" !important;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth !important;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $dark;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  position: relative;
+  background: url("/images/background-lines.svg");
+  background-size: contain;
+  background-repeat: repeat-y;
+  overflow: scroll !important;
+}
+
+@keyframes squeeze {
+  0% {
+    width: 300px;
+    height: 400px;
+  }
+  25% {
+    width: 300px;
+    height: 600px;
+  }
+  50% {
+    width: 300px;
+    height: 400px;
+  }
+  75% {
+    width: 200px;
+    height: 400px;
+  }
+  100% {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+#app-content {
+  width: 70vw;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+}
+
+main {
+  height: 100%;
+  z-index: 1;
+}
+
+.anony {
+  background: url('/images/anony.png');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1 !important;
+  opacity: .08;
+  background-color: red;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none !important;
+}

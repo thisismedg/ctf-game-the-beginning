@@ -1,0 +1,78 @@
+@import "./colors";
+
+#levels-header {
+    font-size: 50px;
+    font-family: 'Pavelt';
+    color: $main;
+    font-weight: 100 !important;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.level-outer-layer {
+    padding: 2rem;
+    background-color: $dark;
+
+    &:hover {
+        background-color: rgba($color: $main, $alpha: 0.1);
+
+        .card-title {
+            color: $gray;
+        }
+        .card-title-content {
+            color: $dark;
+        }
+
+        .card-content {
+            color: $white;
+        }
+
+        .level-inner-layer {
+            background-color: $main;
+        }
+    }
+
+    &:last-child {
+        .level-inner-layer {
+            background-color: $dark;
+        }
+
+        .card-title, .card-title-content, .card-content {
+            color: $gray;
+        }
+    }
+}
+
+.level-inner-layer {
+    background-color: $white;
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    * {
+        transition: all 0.25s ease-in-out;
+    }
+}
+
+.card-title {
+    font-size: 14px;
+    font-family: "Pavelt";
+    color: $dark;
+}
+
+.card-title-content {
+    font-size: 35px;
+    font-family: "Pavelt";
+    color: $main;
+    margin-bottom: 1rem;
+}
+
+.card-content {
+    font-size: 45px;
+    font-family: "Pavelt";
+}

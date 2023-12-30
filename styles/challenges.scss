@@ -1,0 +1,156 @@
+@import "./colors";
+@import "./mixins";
+
+#challenge-container-outer {
+  display: flex;
+  flex-direction: column;
+}
+
+.challenge-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.challenge-category {
+  font-size: 30px;
+  color: $main;
+  text-transform: uppercase;
+}
+
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  min-height: 13rem;
+  border: 1px dashed #212121;
+  background-color: $dark;
+  color: $light;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  width: auto !important;
+  width: 100% !important;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.challenge-card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.challenge-points {
+  font-size: 12px;
+}
+
+.verified {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: -0.75rem;
+  right: -0.75rem;
+  border-radius: 50px;
+  background-image: url("/images/captured.svg");
+  background-size: cover;
+}
+
+.challenge-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left !important;
+  overflow: hidden !important;
+  padding-bottom: 1rem;
+}
+
+.trigger-challenge-title {
+  font-size: 20px;
+  display: block;
+  color: $white !important;
+  text-transform: uppercase;
+}
+
+.challenge-description {
+  font-size: 14px;
+  color: #aaa;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-family: 'DM' !important;
+
+  a {
+    color: $main !important;
+  }
+}
+
+.challenge-solves {
+    font-size: 12px;
+    text-transform: uppercase !important;
+    color: $light-gray;
+    font-weight: 900;
+  }
+
+.modal-challenge-title {
+  font-size: 25px;
+  display: block;
+  color: $main !important;
+  text-transform: uppercase;
+}
+
+.modal-challenge-flag-format {
+    font-family: 'DM' !important;
+}
+
+.modal-challenge-description {
+  font-size: 16px;
+  font-family: 'DM' !important;
+
+  a {
+    color: $main !important;
+  }
+}
+
+.challenge-difficulty {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem .75rem;
+    font-size: 10px;
+    color: $light;
+    background-color: $main;
+    text-transform: uppercase;
+}
+
+.not-valid {
+    font-family: "DM" !important;
+    font-size: 14px;
+    color: $main;
+    display: block;
+    margin-top: 1rem;
+}
+
+.verified-card {
+  background-color: $gray;
+}
+
+.completed-challenge {
+  font-family: 'DM' !important;
+  text-transform: none !important;
+}
+
+.completed-challenge-title {
+ text-transform: uppercase !important;
+ font-size: 14px !important;
+}

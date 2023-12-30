@@ -1,0 +1,55 @@
+@import "./colors";
+
+#app-view {
+  padding: 5rem 0;
+}
+
+#ctf-overview-landing-page-header {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#ctf2023 {
+  text-align: center;
+  font-size: 80px;
+  color: $main;
+  font-weight: 900 !important;
+  display: block;
+
+  span {
+    color: $white;
+  }
+}
+
+.ctf-olph-text {
+  font-size: 18px;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#scroll-down {
+  display: block;
+  margin: 10rem auto;
+  width: 200px;
+  text-decoration: none;
+  color: $white;
+  font-size: 14px;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    color: $main;
+    letter-spacing: 3px;
+  }
+}
+
+.the-beginning {
+    font-size: 20px;
+    color: $white;
+}
+
+.time {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}

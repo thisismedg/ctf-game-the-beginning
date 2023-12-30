@@ -1,0 +1,15 @@
+@import './colors';
+
+.countdown-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden !important;
+}
+
+#timer-container {
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

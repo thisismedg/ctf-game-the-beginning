@@ -1,0 +1,77 @@
+@import './colors';
+@import './mixins';
+
+
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    height: 100%;
+}
+.auth-banner {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.banner-text {
+    font-size: 100px;
+    color: $white;
+}
+
+.highlight-white {
+    color: $white;
+}
+
+.highlight {
+    color: $main;
+}
+
+.auth-form {
+    display: grid;
+    place-content: center;
+    padding: 5rem;
+    background-color: $dark;
+    height: 100%;
+}
+
+.auth-form-heading {
+    font-size: 40px;
+    color: $white;
+    display: inline;
+    line-height: 0px;
+}
+
+.auth-form-heading-tag {
+    font-size: 16px;
+    color: $light-gray;
+    margin-bottom: 1rem
+}
+
+.form-group {
+    @include input;
+    width: 500px;
+}
+
+.auth-button {
+    @include button;
+}
+
+.auth-submit {
+    margin-top: 2rem;
+}
+
+.span-link {
+    display: flex;
+    align-items: center;
+    color: $white;
+    text-transform: uppercase;
+    padding: .5rem 0;
+    margin-top: 1rem;
+    font-size: 14px;
+
+    a {
+        color: $main;
+        margin-left: .5rem;
+    }
+}

@@ -1,0 +1,48 @@
+@import './colors';
+
+.modal {
+    position: fixed;
+    z-index: 9999 !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: $dark, $alpha: .7);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+}
+
+.modal-container {
+    min-width: 500px;
+    min-height: auto;
+    max-width: 600px;
+    background-color: $dark;
+    color: $white;
+    padding: 2rem;
+    border: 1px dashed $dark-gray !important;
+}
+
+.modal-challenge-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 1rem;
+    width: 100%;
+
+    input {
+        padding: .85rem 1rem;
+        background-color: transparent;
+        border: 1px solid $dark-gray;
+        color: $light;
+    }
+
+    button {
+        padding: .75rem 1rem;
+        border: 0;
+        background-color: $main;
+        color: $light;
+        text-transform: uppercase;
+        font-size: 12px;
+        transition: all .25s ease-in-out;
+    }
+}

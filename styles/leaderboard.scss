@@ -1,0 +1,123 @@
+@import "./colors";
+
+#leaderboard-tab {
+}
+
+.tab-list-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.tab-list-item {
+    display: grid;
+    color: $gray;
+    padding: 1rem 2rem;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    &:last-child {
+        color: $dark_gray;
+    }
+}
+
+.tab-list-item-title {
+    color: $white !important;
+}
+
+.react-tabs__tab--selected {
+    background-color: $main;
+    color: $white;
+}
+
+#leaderboard-heading {
+    font-size: 50px;
+    display: block;
+    color: $main;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+.tab-panel {
+    background-color: transparent;
+    margin-top: 0;
+    border: 0;
+    border-top: 1px solid $gray;
+}
+
+#leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+
+    thead {
+        th {
+            color: $main;
+            font-size: 18px;
+            padding: 2rem 0;
+            letter-spacing: 2px;
+            font-weight: 800 !important;
+            text-align: left;
+
+            &:first-child {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                padding-right: 1rem;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            color: $light;
+
+            &:hover {
+                color: $main;
+                font-weight: 900 !important;
+            }
+
+            &:first-child {
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                width: 100%;
+                white-space: nowrap;
+            }
+
+            td {
+                padding: 0.75rem 0;
+                font-weight: 100 !important;
+                text-align: left;
+
+                &:first-child {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+
+                &:not(:first-child) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+.leaderboard-ranking {
+    position: absolute;
+    left: -3rem;
+    font-weight: 900;
+    color: $main;
+}

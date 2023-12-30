@@ -1,0 +1,18 @@
+@import "./colors";
+@import "./mixins";
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+}

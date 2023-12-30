@@ -1,0 +1,64 @@
+@import './colors';
+
+#nav {
+    position: sticky !important;
+    top: 0 !important;
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+#nav-link-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+        margin-left: 2.5rem;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    transition: all .25s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    font-weight: 800;
+    font-family: 'Space Mono';
+    background-color: transparent;
+    border: 0;
+    font-size: 16px !important;
+
+    &::after {
+        content: '';
+        position: absolute;
+        transition: all .25s ease-in-out;
+        transform: translateX(-50%) scale(0);
+        opacity: 0;
+        width: 0;
+        left: 0;
+        bottom: -1.2rem;
+    }
+
+    &:hover {
+        color: $main;
+
+        &::after {
+            content: '\2192';
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+}
+
+.active {
+    color: $main !important;
+}

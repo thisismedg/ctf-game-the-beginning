@@ -1,0 +1,37 @@
+@import './colors';
+
+#aside-info {
+    position: fixed;
+    height: 70%;
+    display: block;
+    width: 1px;
+    right: 6rem;
+
+    &::before {
+        content: 'CAPTURE THE FLAG OFFENSIVE AND RESEARCH EVENT';
+        white-space: nowrap;
+        transform: rotate(90deg);
+        display: block;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        color: $light;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    &::after {
+        content: 'CICS DAYS';
+        white-space: nowrap;
+        transform: rotate(90deg);
+        transform-origin: left;
+        display: block;
+        text-align: center;
+        width: 100%;
+        bottom: 5rem;
+        position: absolute;
+        color: $light;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+}

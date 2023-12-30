@@ -1,0 +1,51 @@
+@import "./colors";
+
+#loading-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+.loader span {
+    width: 100%;
+    height: 100%;
+    background-color: $main;
+    animation: keyframes-blink 0.5s alternate infinite linear;
+}
+
+.loader span:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 150ms;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 150ms;
+}
+
+.loader span:nth-child(4) {
+    animation-delay: 280ms;
+}
+
+@keyframes keyframes-blink {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.5) rotate(20deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

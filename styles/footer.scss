@@ -1,0 +1,12 @@
+@import './colors';
+
+#footer {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#footer-content {
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+}

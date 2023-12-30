@@ -1,0 +1,237 @@
+@import "./colors";
+@import "./mixins";
+
+.teams-form-container {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.teams-form {
+    padding: 5rem;
+    background-color: $dark;
+}
+
+.teams-form-heading {
+    font-size: 40px;
+    color: $white;
+    display: inline;
+}
+
+.teams-form-heading-tag {
+    font-size: 16px;
+    color: $gray;
+    margin-bottom: 1rem;
+}
+
+.teams-form-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    @include input;
+    width: 400px;
+}
+
+.teams-form-submit {
+    @include button;
+}
+
+.span-link {
+    display: flex;
+    align-items: center;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    font-size: 14px;
+
+    a {
+        color: $main;
+        margin-left: 0.5rem;
+    }
+}
+
+.team-information-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.team-heading {
+    display: block;
+    font-size: 50px !important;
+    color: $main;
+    text-transform: uppercase;
+}
+
+#team-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+
+    thead {
+        th {
+            color: $main;
+            font-size: 18px;
+            padding: 2rem 0;
+            letter-spacing: 2px;
+            font-weight: 800 !important;
+            text-align: left;
+
+            &:nth-child(2), &:nth-child(4) {
+                padding-left: 1rem;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            color: $light;
+
+            &:hover {
+                color: $main;
+            }
+
+            td {
+                padding: 0.75rem 0;
+                font-weight: 100 !important;
+                text-align: left;
+                white-space: nowrap;
+
+                span {
+                    position: absolute;
+                    left: -3rem;
+                    font-weight: bold;
+                    color: $main;
+                }
+
+                &:nth-child(1) {
+                    text-align: center;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                    padding-left: 1rem;
+                }
+
+                &:nth-child(3) {
+                    text-align: center;
+                }
+
+                &:nth-child(4) {
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+.error {
+    font-size: 12px;
+    color: $main;
+    margin-top: -.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.me {
+    color: $main;
+}
+
+.remove-dropdown-btn {
+    background-color: transparent;
+    color: white;
+    padding: .75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    
+    img {
+        margin-right: 1rem;
+    }
+
+    &:hover {
+        background-color: $main;
+    }
+}
+
+.more {
+    background-color: $main;
+    color: $white; 
+    margin-left: auto;
+    padding: .25rem .5rem;
+}
+
+.dropdown-content {
+    right: 0;
+    max-width: 10rem;
+    top: 3rem;
+    background-color: $dark;
+    padding: 1rem;
+    border: 1px solid $gray;
+    color: $white;
+}
+
+.modal-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
+}
+
+.cancel-delete-team {
+    padding: .75rem;
+    background-color: transparent;
+    transition: all .25s ease-in-out;
+    border: 0;
+    width: 100%;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        color: $white;
+        background-color: rgba($color: $gray, $alpha: .8);
+    }
+}
+
+.team-delete-title {
+    color: $main;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.delete-modal {
+    min-width: 400px !important;
+    width: 400px;
+
+    p {
+        width: auto !important;
+        text-wrap: wrap;
+    }
+}
+
+.delete-team {
+    padding: .75rem;
+    background-color: $main;
+    transition: all .25s ease-in-out;
+    border: 0;
+    width: 100%;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        color: $white;
+        background-color: rgba($color: $main, $alpha: .8);
+    }
+}
